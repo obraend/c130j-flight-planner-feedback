@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest an improvement to the planner.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing requests first. This request and any attachments will be public."
+  - type: textarea
+    id: need
+    attributes:
+      label: What would you like to do?
+      description: Describe the task or problem the planner could help with.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: How could the planner help?
+      description: Describe your suggested improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or examples
+      description: Optional workarounds, sketches or examples that explain the idea.
