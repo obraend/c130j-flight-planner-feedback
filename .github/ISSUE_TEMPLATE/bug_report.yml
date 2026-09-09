@@ -1,0 +1,57 @@
+name: Bug report
+description: Something in the planner did not work as expected.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing reports first. This report and any attachments will be public."
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Which planner are you using?
+      options:
+        - Live planner
+        - Beta planner
+        - Local build
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Planner version
+      description: Shown in the footer at the bottom of the planner.
+      placeholder: "For example, 0.3.0-beta.1"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the route, cargo, fuel settings or other inputs needed to reproduce the problem.
+      placeholder: "1. Open the planner...\n2. Set...\n3. Select..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+      description: Include a screenshot if it helps explain the problem.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: "For example, Chrome on Windows 11, or Safari on iPad"
+  - type: textarea
+    id: additional
+    attributes:
+      label: Anything else?
+      description: For comparisons with DCS, include the DCS and C-130J module versions and the relevant cockpit page or conditions.
